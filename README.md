@@ -1,5 +1,13 @@
 #  小程序9宫格抽奖插件
 
+[查看GitHub仓库最新文档(源码)](<https://github.com/flyingdwang/flyingd-fruit-slots>)
+
+` https://github.com/flyingdwang/flyingd-fruit-slots.git`
+
+#### 查看在线演示(支付宝扫码) 
+
+![](https://github.com/flyingdwang/flyingd-fruit-slots/blob/master/alipay-preview.png?raw=true)
+
 ###  安装
 
 ` cnpm install  flyingd-fruit-slots --save`
@@ -123,8 +131,8 @@ Page({
 | class            | 自定义类名。                                                 | String   | -                      | 否   |
 | disabled         | 抽奖按钮是否可点击。                                         | Boolean  | false                  | 否   |
 | onStart          | 抽奖转动方法; 需要有成功回调 resolve();                      | Function | () => {}               | 是   |
-| onFinish         | 转动结束的回调, @params(index: 奖品所在格子下标，name: 奖品名称)。 | Function | (index, prizeItem)=>{} | 否   |
+| onFinish         | 转动结束的回调, @params(index: 奖品所在格子下标，prizeItem: 奖品详情参数)。 | Function | (index, prizeItem)=>{} | 否   |
 
 **说明：** 组件中格子自左上角顺时针开始标号，围绕中间按钮，下标从 0 开始递增到 7。当需要组件从左下角的格子为初始位置开始转动，只需要设置 `currentIndex = 6` 即可。
 
-![](C:\Users\94148\Pictures\Camera Roll\fruit-slots\6b024a982c9fd681d2549561d01e3d48.png)
+![](https://gw.alipayobjects.com/zos/skylark-tools/public/files/6b024a982c9fd681d2549561d01e3d48.png)
