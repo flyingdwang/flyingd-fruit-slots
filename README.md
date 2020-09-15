@@ -4,9 +4,15 @@
 
 ` https://github.com/flyingdwang/flyingd-fruit-slots.git`
 
-#### 查看在线演示(支付宝扫码) 
+#### [查看在线演示(支付宝扫码) ](https://github.com/flyingdwang/flyingd-fruit-slots/blob/master/alipay-preview.png?raw=true)
 
-![](https://github.com/flyingdwang/flyingd-fruit-slots/blob/master/alipay-preview.png?raw=true)
+```
+https://github.com/flyingdwang/flyingd-fruit-slots/blob/master/alipay-preview.png?raw=true
+```
+
+
+
+![](<https://raw.githubusercontent.com/flyingdwang/flyingd-fruit-slots/master/alipay-preview.png>)
 
 ###  安装
 
@@ -135,4 +141,11 @@ Page({
 
 **说明：** 组件中格子自左上角顺时针开始标号，围绕中间按钮，下标从 0 开始递增到 7。当需要组件从左下角的格子为初始位置开始转动，只需要设置 `currentIndex = 6` 即可。
 
-![](https://gw.alipayobjects.com/zos/skylark-tools/public/files/6b024a982c9fd681d2549561d01e3d48.png)
+[查看格子顺序详情(图片)](https://gw.alipayobjects.com/zos/skylark-tools/public/files/6b024a982c9fd681d2549561d01e3d48.png)
+
+```
+https://gw.alipayobjects.com/zos/skylark-tools/public/files/6b024a982c9fd681d2549561d01e3d48.png
+```
+
+![](<https://raw.githubusercontent.com/flyingdwang/flyingd-fruit-slots/master/index-info.png>)
+
