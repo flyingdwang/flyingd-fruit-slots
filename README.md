@@ -87,17 +87,15 @@ Page({
         tipText: '',
     },
     /** 开始抽奖 */
-    onStart() {
-        return new Promise((resolve)=>{
-            this.requestFun().then(res=>{
-                console.log(res.index);
-                
+    onStart(resolve) {
+        /** 抽奖 */
+        this.requestFun().then(res=>{
+            console.log(res.index);
+            /** 成功回调 */
+            resolve(res.index);
             this.setData({
                 prizeActiveIndex:res.index,
                 tipText: '正在抽奖...'
-            })
-            /** 成功回调(必须) */
-            resolve();
             })
         })
     },

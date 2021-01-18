@@ -79,27 +79,27 @@ Component({
       return -1;
     },
     start: function start() {
-      this.props.onStart().then(()=>{
-        setTimeout(()=>{
-          let { prizeActiveIndex,disabled,currentIndex } = this.props;
-          if (disabled || this.data.isRolling) return;
-          if (this.props.prizeList.length !== 8) {
-            throw new Error('奖品项列表 prizeList 长度不为8');
-          }
-          var activeIndex = +currentIndex || 0;
-          // 奖品项下标
-          var prizeIndex = this.findPrizeIndex(prizeActiveIndex);
-          if (prizeIndex === -1) {
-            throw new Error('请传入正确的获奖项name，其值必须存在于 prizeList name 字段中');
-          }
-          // 总转动步数 = 默认圈数 x 奖品个数 + 结束位置索引 + 当前位置到一圈结束还剩下的步数
-          this.totalSteps = this.props.rollTimes * this.prizeLength + prizeIndex + (this.prizeLength - activeIndex);
-          this.currentStep = 0;
-          this.setData({ isRolling: true });
-          this.next(activeIndex);
-        },100)
-      }).catch(_=>{});
-
+      if(this.data.isRolling) return;
+      this.setData({ isRolling: true });
+       this.props.onStart((index)=>{
+         setTimeout(()=>{
+           let { prizeActiveIndex,disabled,currentIndex } = this.props;
+           if (disabled) return;
+           if (this.props.prizeList.length !== 8) {
+             throw new Error('奖品项列表 prizeList 长度不为8');
+           }
+           var activeIndex = +currentIndex || 0;
+           // 奖品项下标
+           var prizeIndex = this.findPrizeIndex(index||prizeActiveIndex);
+           if (prizeIndex === -1) {
+             throw new Error('请传入正确的获奖项name，其值必须存在于 prizeList name 字段中');
+           }
+           // 总转动步数 = 默认圈数 x 奖品个数 + 结束位置索引 + 当前位置到一圈结束还剩下的步数
+           this.totalSteps = this.props.rollTimes * this.prizeLength + prizeIndex + (this.prizeLength - activeIndex);
+           this.currentStep = 0;
+           this.next(activeIndex);
+         },100)
+      })
     },
     done: function done(activeIndex) {
       var _this2 = this;

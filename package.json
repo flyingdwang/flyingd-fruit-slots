@@ -1,6 +1,6 @@
 {
   "name": "flyingd-fruit-slots",
-  "version": "1.0.01",
+  "version": "1.0.04",
   "private": false,
   "description": "支付宝小程序抽奖组件",
   "main": "fl-fruit-slot/index.js",
@@ -11,7 +11,7 @@
     "支付宝",
     "小程序",
     "九宫格",
-    "抽奖",
+    "支付宝抽奖",
     "运营运销",
     "活动抽奖"
    ],
