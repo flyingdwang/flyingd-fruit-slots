@@ -88,6 +88,14 @@ Page({
     },
     /** 开始抽奖 */
     onStart(resolve) {
+    	/** 有resolve 返回值 则抽奖 否则 不执行  */
+    	/** 
+        	if(true){
+        		resolve(index)
+        	}else{
+        		return
+        	}
+        */
         /** 抽奖 */
         this.requestFun().then(res=>{
             console.log(res.index);

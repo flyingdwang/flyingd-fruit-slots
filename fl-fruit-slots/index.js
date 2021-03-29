@@ -80,8 +80,9 @@ Component({
     },
     start: function start() {
       if(this.data.isRolling) return;
-      this.setData({ isRolling: true });
-       this.props.onStart((index)=>{
+      this.props.onStart((index)=>{
+        if(!index) return;
+        this.setData({ isRolling: true });
          setTimeout(()=>{
            let { prizeActiveIndex,disabled,currentIndex } = this.props;
            if (disabled) return;
